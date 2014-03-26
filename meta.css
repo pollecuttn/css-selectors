@@ -1,0 +1,17 @@
+/**************************/
+/* Meta: page formatting  */
+section {
+    padding: 1em;
+}
+
+section:nth-of-type(2n) {
+    background-color: #eee;
+}
+
+section:nth-of-type(2n+1) {
+    border: 1px solid #ccc;
+}
+footer.meta,
+footer.meta a {
+    font-size: 0.8rem;
+}

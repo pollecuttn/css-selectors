@@ -1,0 +1,242 @@
+/*** Specimen CSS: selectors ***/
+
+/** Basic **/
+/* universal */
+* {
+    font-family: helvetica "Gill sans" Arial "sans-serif";
+}
+
+/* element */
+dt {
+    text-transform: uppercase;
+}
+
+/* class */
+.cls-red {
+    color: red;
+}
+
+/* multiple class */
+.cls-green.cls-big {
+    color: green;
+    font-size: 2em;
+}
+
+/* id */
+#me {
+    font-weight: bold;
+}
+
+/** Attributes **/
+/* attribute - simple presence */
+[data-colour-me-blue] {
+    color: blue;
+}
+
+/* attribute - exact match */
+[href="/home.html"] {
+    font-weight: bold;
+    color: red;
+}
+
+/* attribute - substring match */
+[href*="assets/"] {
+    font-style: italic;
+}
+
+/* attribute - word match */
+[data-floor-type~="grass"] {
+    color: green;
+    font-weight: bold;
+}
+
+/* attribute - starts-with match */
+[href^="http"] {
+    font-size: 2em;
+}
+
+/* attribute - ends-with match */
+[href$=".pdf"]::after {
+    content: " [pdf]";
+}
+
+/* attribute - particular */
+[lang|="fr"] {
+    color: #cc4;
+}
+
+
+/** Grouping **/
+/* descendant */
+.some-ul .some-span {
+    font-style: italic;
+}
+
+/* child */
+article > .chld-blue {
+    color: blue;
+}
+
+/* adjacent sibling */
+.adj-sibling-target + li {
+    color: silver;
+}
+
+/* following siblings */
+.gen-sibling-target ~ li {
+    font-weight: bold;
+}
+
+
+/** Pseudo-classes **/
+/* root */
+:root {
+    border: 1px dashed silver;
+}
+
+/* empty */
+.root-of-empty-search :empty:after {
+    content: "[empty element]";
+}
+
+/* unique children */
+.root-of-only-child-search p span:only-child {
+    font-variant: small-caps;
+}
+
+/* unique children of type */
+.root-of-only-child-of-type-search p span:only-of-type {
+    font-variant: small-caps;
+}
+
+/* first child */
+.root-of-first-child-search li:first-child {
+    font-weight: bold;
+}
+
+/* first child of type */
+.root-of-first-child-of-type-search span:first-of-type {
+    font-weight: bold;
+}
+
+/* last child */
+.root-of-last-child-search li:last-child {
+    font-weight: bold;
+}
+
+/* last child of type */
+.root-of-last-child-of-type-search span:last-of-type {
+    font-weight: bold;
+}
+
+/* nth-child */
+.root-of-nth-child-search li:nth-child(2) {
+    font-weight: bold;
+}
+
+/* nth-child(xn) */
+.root-of-nth-child-xn-search li:nth-child(2n) {
+    font-weight: bold;
+}
+
+/* nth-child(xn+m) */
+.root-of-nth-child-xn-offset-search li:nth-child(3n+2) {
+    font-weight: bold;
+}
+
+/* nth-child(even) */
+.root-of-nth-child-even-search li:nth-child(even) {
+    font-weight: bold;
+}
+
+/* nth-child(odd) */
+.root-of-nth-child-odd-search li:nth-child(odd) {
+    font-weight: bold;
+}
+
+/* nth-last-child */
+.root-of-nth-last-child-search li:nth-last-child(2) {
+    font-weight: bold;
+}
+
+/* nth-last-child-with-offset */
+.root-of-nth-child-xn-last-offset-search li:nth-last-child(3n+2) {
+    font-weight: bold;
+}
+
+
+
+/* dynamic pseudo classes on a element */
+.root-of-link-pseudo-classes-search a:link {
+    color: green;
+}
+
+.root-of-link-pseudo-classes-search a:visited {
+    color: red;
+}
+
+.root-of-link-pseudo-classes-search a:hover {
+    color: blue;
+}
+
+.root-of-link-pseudo-classes-search a:active {
+    font-weight: bold;
+}
+
+/* dynamic UI pseudo classes */
+.root-of-ui-pseudo-classes-search :enabled {
+    border: 2px green solid;
+}
+
+.root-of-ui-pseudo-classes-search :disabled {
+    border: 2px red solid;
+}
+
+.root-of-ui-pseudo-classes-search :checked {
+    margin-left: 50px;
+}
+
+/* target pseudo class */
+:target {
+    color: #333;
+    background-color: #ff0;
+}
+
+/* lang pseudo class */
+:lang(pt) {
+    color: #34e;
+}
+
+/* negation pseudo class */
+.root-of-negation-pseudo-classes-search :not(.include-me) {
+    color: red;
+    font-weight: bold;
+}
+
+/******************
+ Pesudo element syntax uses '::' prefix (cf ':' prefix for pseudo classes).
+ Note that IE8 is buggy and does not recognise the '::' prefix. When supporting
+ IE8, specify ':pseudo-element' then '::pseudoelement' in stylesheet.
+ *****************/
+ 
+/* first letter pseudo element */
+.first-letter-target::first-letter {
+    font-size: 200%;
+}
+
+/* first letter pseudo element */
+.first-line-target::first-line {
+    font-weight: bold;
+}
+
+/* generated content ::before */
+.put-stuff-before-me::before {
+    font-style: italic;
+    content: "am just nippin' in here, cheekily! "
+}
+
+/* generated content ::after */
+.put-stuff-after-me::after {
+    font-style: italic;
+    content: " loitering at the end..."
+}

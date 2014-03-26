@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demonstration of CSS selectors</title>
+    <meta name="description" content="Markup supporting selectors.css">
+    <link rel="stylesheet" href="meta.css">
+    <link rel="stylesheet" href="selectors.css">
+</head>
+<body>
+    <header role="banner">
+        <h1>Illustrative use of CSS selectors</h1>
+    </header>
+
+    <section>
+        <h2>Basic</h2>
+        <article>
+            <h3>universal selector</h3>
+            <p>elements matching "*" (all), have font set here.</p>
+        </article>
+
+        <article>
+            <h3>element selector</h3>
+            <p>force <code>dt</code> elements uppercase</p>
+            <dl>
+                <dt>Marvin</dt>
+                <dd>The best paranoia out of this world. Probably.</dd>
+            </dl>
+        </article>
+
+        <article>
+            <h3>class selector</h3>
+            <p>Colour elements red with <code class="cls-red">.cls-red</code> </p>
+        </article>
+
+        <article>
+            <h3>multiple class selector</h3>
+            <p>Colour elements green, emboldened, with <code class="cls-green cls-big">.cls-green.cls-big</code> </p>
+        </article>
+
+        <article>
+            <h3>id selector</h3>
+            <p>Make <span id="me">#me</span> bold!</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Attributes</h2>
+        <article>
+            <h3>attribute selector: simple presence</h3>
+            <p>Make blue an element with attribute <code>data-colour-me-blue</code>: its value is irrelevant.</p>
+            <p>Please will you <span data-colour-me-blue="">colour me blue</span>.</p>
+        </article>
+
+        <article>
+            <h3>attribute selector: exact value match</h3>
+            <p>Make red and bold an anchor with the href attribute value exactly "/home.html"</p>
+            <p>Take me <a href="/home.html">home</a>! But take me <a href="/somewhere/else.html">somewhere else</a>...</p>
+        </article>
+
+        <article>
+            <h3>attribute selector: substring match</h3>
+            <p>Make an anchor element italic if its href attribute contains the string "assets/"</p>
+            <p>browse the <a href="assets/">assets</a> directory.</p>
+        </article>
+
+        <article>
+            <h3>attribute selector: word match</h3>
+            <p>Make the text green if "grass" is a word in the value of the <code>data-floor-type</code> attribute.</p>
+            <p>Check out this <span data-floor-type="outside grass">grass</span>, and this <span data-floor-type="outside patio">patio</span></p>
+        </article>
+
+        <article>
+            <h3>attribute selector: starts with string</h3>
+            <p>Make links bigger if they begin "http"</p>
+            <ul>
+                <li><a href="http://external-link">external link</a></li>
+                <li><a href="/internal-link/">internal link</a></li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>attribute selector: ends with string</h3>
+            <p>add generated content after to links that end in ".pdf"</p>
+            <ul>
+                <li><a href="web-page.html">web page</a></li>
+                <li><a href="download.pdf">download</a></li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>attribute selector: particular</h3>
+            <p>Make French text a different color</p>
+            <ul>
+                <li lang="en-uk">Hello!</li>
+                <li lang="fr">Bonjour</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>Structural</h2>
+        <article>
+            <h3>descendant selector</h3>
+            Put the <code>span</code> that lives anywhere within a <code>ul</code>
+            into italics.
+            <ul class="some-ul">
+                <li>I am plain, but... <span class="some-span">I am italic! Yay!</span></li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>child selector</h3>
+            <p>make the child <code>div</code> blue, but not a more remote descendant</p>
+            <div class="chld-blue">
+                I am an immediate child.
+            </div>
+            <div class="chld-blue">
+                I am another immediate child.
+            </div>
+            <div>
+                <div class="chld-blue">I am a more remote descendant.</div>
+            </div>
+        </article>
+
+        <article>
+            <h3>adjacent sibling selector</h3>
+            <p>makes silver the subsequent sibling after the target.</p>
+            <ol>
+                <li>non-sibling non-target</li>
+            </ol>
+            <ul>
+                <li>sibling non-target</li>
+                <li class="adj-sibling-target">target of the sibling selector</li>
+                <li>sibling non-target</li>
+                <li>sibling non-target</li>
+            </ul>
+            <p>non-sibling non-target.</p>
+        </article>
+
+        <article>
+            <h3>following siblings selector</h3>
+            <p>makes bold all matched siblings subsequent to the target.</p>
+            <ol>
+                <li>non-sibling non-target</li>
+            </ol>
+            <ul>
+                <li>sibling non-target</li>
+                <li class="gen-sibling-target">target of the sibling selector</li>
+                <li>sibling non-target</li>
+                <li>sibling non-target</li>
+            </ul>
+            <p>non-sibling non-target.</p>
+        </article>
+    </section>
+
+    <section>
+        <h3>Pseudo classes: structural</h3>
+        <article>
+            <h3>root</h3>
+            <p>:root selects root element. Can also use html in html docs, but :root necessary for other doc types e.g. XML, SVG etc.</p>
+        </article>
+
+        <article>
+            <h3>empty</h3>
+            <p>:empty selects empty elements. N.B. elements, whitespace and text nodes prevent an element from being :empty. The presence of comment nodes does not prevent their parent element from being :empty.</p>
+            <p>The middle list item is empty, and has content-after applied by its matched rule</p>
+            <ul class="root-of-empty-search">
+                <li>First element</li>
+                <li></li>
+                <li>Third element</li>
+            </ul>
+        </article>
+
+        <article class="root-of-only-child-search">
+            <h3>unique children</h3>
+            <p>:only-child matches if the designated element is the only child of its parent (only evaluates element node type, ignores text). In the example below, the match to :only-child will be in small caps.</p>
+            <p>In this paragraph, <span>this element</span> is the only child.</p>
+            <p>In this paragraph, both <span>this</span>, and <span>this element</span>, are child elements of the same type.</p>
+        </article>
+
+        <article class="root-of-only-child-of-type-search">
+            <h3>unique children of same type</h3>
+            <p>:only-child-of-type matches if the designated element is the only child of that type of its parent (only evaluates element node type, ignores text). In the example below, the match to :only-child-of-type will be in small caps.</p>
+            <p>In this paragraph, <span>this element</span> is the only child.</p>
+            <p>In this paragraph, both <span>this</span>, and <span>this element</span>, are child elements of the same type.</p>
+            <p>In this paragraph, <span>this</span>, and <label>this element</label>, are child elements of different types.</p>
+        </article>
+
+        <article>
+            <h3>first child</h3>
+            <p>matches the element where it appears as the first child of a parent.</p>
+            <ul class="root-of-first-child-search">
+                <li>first child</li>
+                <li>second child</li>
+                <li>third child</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>first child of type</h3>
+            <p>matches the element where it appears as the first child of its element type of a parent. (May well not be the first element, though).</p>
+            <p class="root-of-first-child-of-type-search">Here is a <label>label</label>, and here is a <span>span</span>. Oh, and another <span>span</span>.</p>
+        </article>
+
+        <article>
+            <h3>last child</h3>
+            <p>matches the element where it appears as the last child of a parent.</p>
+            <ul class="root-of-last-child-search">
+                <li>first child</li>
+                <li>second child</li>
+                <li>third child</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>last child of type</h3>
+            <p>matches the element where it appears as the last child of its element type of a parent. (May well not be the last element, though).</p>
+            <p class="root-of-last-child-of-type-search">Here is a <span>span</span>, and another <span>span</span>. And here is a <label>label</label>.</p>
+        </article>
+
+        <article>
+            <h3>nth-child</h3>
+
+            <h4>exactly this one, specific, nth child</h4>
+            <p><code>:nth-child(2)</code> will target exactly the given element when it is the second child element of its parent.</p>
+            <ul class="root-of-nth-child-search">
+                <li>first child</li>
+                <li>Second child</li>
+                <li>Third child</li>
+                <li>Fourth child</li>
+                <li>Fifth child</li>
+                <li>Sixth child</li>
+                <li>Seventh child</li>
+            </ul>
+
+            <h4>every nth child</h4>
+            <p><code>:nth-child(2n)</code> - an element of this type will be matched if it is 2 * nth child element of its parent (where n is the series 0 to the number of child elements).</p>
+            <ul class="root-of-nth-child-xn-search">
+                <li>first child</li>
+                <li>Second child</li>
+                <li>Third child</li>
+                <li>Fourth child</li>
+                <li>Fifth child</li>
+                <li>Sixth child</li>
+                <li>Seventh child</li>
+            </ul>
+
+            <h4>every nth child starting with offset</h4>
+            <p><code>:nth-child(3n+2)</code> - an element of this type will be matched if it is 3 * n + 2th child element of its parent (where n is the series 0 to the number of child elements). Note that although in this example the offset is +2, the offset may be negative.</p>
+            <ul class="root-of-nth-child-xn-offset-search">
+                <li>first child</li>
+                <li>Second child</li>
+                <li>Third child</li>
+                <li>Fourth child</li>
+                <li>Fifth child</li>
+                <li>Sixth child</li>
+                <li>Seventh child</li>
+            </ul>
+
+            <h4>every even child</h4>
+            <p>an element of this type will be matched if it is an even child of its parent</p>
+            <ul class="root-of-nth-child-even-search">
+                <li>first child</li>
+                <li>Second child</li>
+                <li>Third child</li>
+                <li>Fourth child</li>
+                <li>Fifth child</li>
+                <li>Sixth child</li>
+                <li>Seventh child</li>
+            </ul>
+
+            <h4>every odd child</h4>
+            <p>an element of this type will be matched if it is an odd child of its parent</p>
+            <ul class="root-of-nth-child-odd-search">
+                <li>first child</li>
+                <li>Second child</li>
+                <li>Third child</li>
+                <li>Fourth child</li>
+                <li>Fifth child</li>
+                <li>Sixth child</li>
+                <li>Seventh child</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>nth-last-child</h3>
+
+            <h4>exactly this one, specific, nth-last child</h4>
+            <p><code>:nth-last-child(2)</code> will target exactly the given element when it is the second last child element of its parent.</p>
+            <ul class="root-of-nth-last-child-search">
+                <li>first child</li>
+                <li>Second child</li>
+                <li>Third child</li>
+                <li>Fourth child</li>
+                <li>Fifth child</li>
+                <li>Sixth child</li>
+                <li>Seventh child</li>
+            </ul>
+
+            <h4>every nth-last child</h4>
+            <p><code>:nth-last-child(2n)</code> - an element of this type will be matched if it is 2 * nth-last child element of its parent (where n is the series 0 to the number of child elements).</p>
+            <ul class="root-of-nth-child-xn-search">
+                <li>first child</li>
+                <li>Second child</li>
+                <li>Third child</li>
+                <li>Fourth child</li>
+                <li>Fifth child</li>
+                <li>Sixth child</li>
+                <li>Seventh child</li>
+            </ul>
+
+            <h4>every nth-last child with offset</h4>
+            <p><code>:nth-last-child(3n+2)</code> - an element of this type will be matched if it is 3 * n + 2th child element of its parent (where n is the series 0 to the number of child elements). Note that although in this example the offset is +2, the offset may be negative.</p>
+            <ul class="root-of-nth-child-xn-last-offset-search">
+                <li>first child</li>
+                <li>Second child</li>
+                <li>Third child</li>
+                <li>Fourth child</li>
+                <li>Fifth child</li>
+                <li>Sixth child</li>
+                <li>Seventh child</li>
+            </ul>
+
+        </article>
+
+        <article>
+            <h3>nth-of-type</h3>
+            <p>As nth-child, but only elements of the element type to match are included in the evaluation of the child count.</p>
+        </article>
+
+        <article>
+            <h3>nth-last-of-type</h3>
+            <p>As nth-of-type, but only elements of the element type to match are included in the evaluation of the child count.</p>
+        </article>
+
+    </section>
+
+    <section>
+        <h2>Pseudo classes: dynamic</h2>
+        <article>
+            <h3>the anchor element's - :link, :visited, :hover, :active</h3>
+            <p>matches a elements in a particular dynamic state.</p>
+            <p class="root-of-link-pseudo-classes-search"><a href="/one/">one</a>, <a href="selectors.css">two</a>, <a href="/three/">three</a>, <a href="/four/">four</a>.</p>
+        </article>
+
+        <article>
+            <h3>UI state</h3>
+            <p>typically used with forms, for example:</p>
+            <form action="GET" class="root-of-ui-pseudo-classes-search">
+                <div><label for="isEnabled"><code>:enabled</code></label><input type="text" id="isEnabled" name="isEnabled"></div>
+                <div><label for="isDisabled"><code>:disabled</code></label><input type="text" id="isDisabled" name="isDisabled" disabled="disabled"></div>
+                <div><label for="isChecked"><code>:checked</code></label><input type="checkbox" id="isChecked" name="isChecked" checked="checked"></div>
+                <p>There is also the <code>:indeterminate</code>, pseudo class that can only be added programatically.</p>
+            </form>
+        </article>
+
+        <article>
+            <h3>:target</h3>
+            <p>matches the element with the id corresponding to the value of the fragment identifier portion of the document's URL.</p>
+            <p><a href="#myTarget">get the target</a></p>
+            <div id="myTarget">I am the target!</div>
+        </article>
+
+        <article>
+            <h3>:lang</h3>
+            <p>matches elements of the specified language. In contrast with the lang attribute selector, this <code>:lang</code> pseudo element takes many document methods of language specification into account (including the lang attribute.</p>
+            <p>Make Portuguese text a different color:</p>
+            <ul>
+                <li lang="en-uk">Hello!</li>
+                <li lang="pt">Ol&aacute;</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>:not() pseudo-class</h3>
+            <p>matches elements that do not match the negated selector:</p>
+            <ul class="root-of-negation-pseudo-classes-search">
+                <li class="include-me">I'm included</li>
+                <li class="include-me">I'm included</li>
+                <li>I'm not included</li>
+                <li class="include-me">I'm included</li>
+            </ul>
+        </article>
+
+    </section>
+
+    <section>
+        <h2>Pseudo-elements</h2>
+        <p>Pesudo element syntax uses '::' prefix (cf ':' prefix for pseudo classes). Note that IE8 is buggy and does not recognise the '::' prefix. When supporting IE8, specify ':pseudo-element' then '::pseudoelement' in stylesheet.</p>
+
+        <article>
+            <h3>first letter</h3><code>::first-letter</code> matches the first letter within an element</h3>
+            <p class="first-letter-target">First letter of this paragraph is bigger.</p>
+        </article>
+
+        <article>
+            <h3>first line</h3><code>::first-line</code> matches the first letter within an element</h3>
+            <p class="first-line-target">The first line of this paragraph is always going to be bold, no matter how long it is. If you resize the viewport, you will still be able to see the first line of this paragraph emboldened. That's how it works.</p>
+        </article>
+
+        <article>
+            <h3><em>generated content</em></h3>
+            <ul>
+                <li>source content</li>
+                <li class="put-stuff-before-me">source content</li>
+                <li class="put-stuff-after-me">source content</li>
+            </ul>
+        </article>
+    </section>
+    <footer class="meta">Made by <a href="http://twitter.com/davidcmoulton">@davidcmoulton</a></footer>
+</body>
+</html>
