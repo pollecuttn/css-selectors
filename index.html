@@ -166,6 +166,16 @@ dt {
                 <li><a href="web-page.html">web page</a></li>
                 <li><a href="download.pdf">download</a></li>
             </ul>
+			<xmp>
+<ul>
+	<li><a href="web-page.html">web page</a></li>
+	<li><a href="download.pdf">download</a></li>
+</ul>
+/* attribute - ends-with match */
+[href$=".pdf"]::after {
+    content: " [pdf]";
+}
+			</xmp>
         </article>
 
         <article>
