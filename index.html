@@ -282,7 +282,7 @@ article > .chld-blue {
         </article>
 
         <article>
-            <h3>following siblings selector</h3>
+            <h3>general siblings selector</h3>
             <p>makes bold all matched siblings subsequent to the target.</p>
             <ol>
                 <li>non-sibling non-target</li>
@@ -294,6 +294,23 @@ article > .chld-blue {
                 <li>sibling non-target</li>
             </ul>
             <p>non-sibling non-target.</p>
+			<xmp>
+<ol>
+	<li>non-sibling non-target</li>
+</ol>
+<ul>
+	<li>sibling non-target</li>
+	<li class="gen-sibling-target">target of the sibling selector</li>
+	<li>sibling non-target</li>
+	<li>sibling non-target</li>
+</ul>
+<p>non-sibling non-target.</p>
+/* following siblings */
+.gen-sibling-target ~ li {
+    font-weight: bold;
+}
+			</xmp>
+			<p>NB <a href="http://css-tricks.com/almanac/selectors/g/general-sibling/">This selects elements at the same hierarchy level.</a></p>
         </article>
     </section>
 
