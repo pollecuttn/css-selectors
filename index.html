@@ -207,6 +207,16 @@ dt {
             <ul class="some-ul">
                 <li>I am plain, but... <span class="some-span">I am italic! Yay!</span></li>
             </ul>
+			<xmp>
+<ul class="some-ul">
+	<li>I am plain, but... <span class="some-span">I am italic! Yay!</span></li>
+</ul>
+/* descendant */
+.some-ul .some-span {
+    font-style: italic;
+}
+			</xmp>
+			<p>NB <a href="http://css-tricks.com/almanac/selectors/d/descendant/">there must be a space between the selectors</a> in the CSS: .some-ul .some-span</p>
         </article>
 
         <article>

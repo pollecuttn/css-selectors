@@ -55,6 +55,11 @@ dt {
     font-size: 2em;
 }
 
+/* resetting for the rest of the document */
+[href^="http"] {
+    font-size: 1em;
+}
+
 /* attribute - ends-with match */
 [href$=".pdf"]::after {
     content: " [pdf]";
