@@ -252,7 +252,7 @@ article > .chld-blue {
 
         <article>
             <h3>adjacent sibling selector</h3>
-            <p>makes silver the subsequent sibling after the target.</p>
+            <p>makes the subsequent sibling after the target silver.</p>
             <ol>
                 <li>non-sibling non-target</li>
             </ol>
@@ -263,6 +263,22 @@ article > .chld-blue {
                 <li>sibling non-target</li>
             </ul>
             <p>non-sibling non-target.</p>
+			<xmp>
+<ol>
+	<li>non-sibling non-target</li>
+</ol>
+<ul>
+	<li>sibling non-target</li>
+	<li class="adj-sibling-target">target of the sibling selector</li>
+	<li>sibling non-target</li>
+	<li>sibling non-target</li>
+</ul>
+<p>non-sibling non-target.</p>
+/* adjacent sibling */
+.adj-sibling-target + li {
+    color: silver;
+}
+			</xmp>
         </article>
 
         <article>
