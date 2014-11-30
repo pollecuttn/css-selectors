@@ -103,6 +103,14 @@ dt {
             <h3>attribute selector: exact value match</h3>
             <p>Make red and bold an anchor with the href attribute value exactly "/home.html"</p>
             <p>Take me <a href="/home.html">home</a>! But take me <a href="/somewhere/else.html">somewhere else</a>...</p>
+			<xmp>
+<p>Take me <a href="/home.html">home</a>! But take me <a href="/somewhere/else.html">somewhere else</a>...</p>
+/* attribute - exact match */
+[href="/home.html"] {
+    font-weight: bold;
+    color: red;
+}
+			</xmp>
         </article>
 
         <article>
