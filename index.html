@@ -130,6 +130,14 @@ dt {
             <h3>attribute selector: word match</h3>
             <p>Make the text green if "grass" is a word in the value of the <code>data-floor-type</code> attribute.</p>
             <p>Check out this <span data-floor-type="outside grass">grass</span>, and this <span data-floor-type="outside patio">patio</span></p>
+			<xmp>
+<p>Check out this <span data-floor-type="outside grass">grass</span>, and this <span data-floor-type="outside patio">patio</span></p>
+/* attribute - word match */
+[data-floor-type~="grass"] {
+    color: green;
+    font-weight: bold;
+}
+			</xmp>
         </article>
 
         <article>
