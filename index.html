@@ -117,6 +117,13 @@ dt {
             <h3>attribute selector: substring match</h3>
             <p>Make an anchor element italic if its href attribute contains the string "assets/"</p>
             <p>browse the <a href="assets/">assets</a> directory.</p>
+			<xmp>
+<p>browse the <a href="assets/">assets</a> directory.</p>
+/* attribute - substring match */
+[href*="assets/"] {
+    font-style: italic;
+}
+			</xmp>
         </article>
 
         <article>
