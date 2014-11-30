@@ -61,8 +61,8 @@ dt {
 }
 
 /* attribute - ends-with match */
-[href$=".pdf"]::after {
-    content: " [pdf]";
+[href$=".pdf"] {
+    color: turquoise;
 }
 
 /* attribute - particular */
