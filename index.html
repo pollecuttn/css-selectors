@@ -406,6 +406,13 @@ article > .chld-blue {
             <h3>first child of type</h3>
             <p>matches the element where it appears as the first child of its element type of a parent. (May well not be the first element, though).</p>
             <p class="root-of-first-child-of-type-search">Here is a <label>label</label>, and here is a <span>span</span>. Oh, and another <span>span</span>.</p>
+			<xmp>
+<p class="root-of-first-child-of-type-search">Here is a <label>label</label>, and here is a <span>span</span>. Oh, and another <span>span</span>.</p>
+/* first child of type */
+.root-of-first-child-of-type-search span:first-of-type {
+    font-weight: bold;
+}
+			</xmp>
         </article>
 
         <article>
