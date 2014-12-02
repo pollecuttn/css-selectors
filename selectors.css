@@ -5,6 +5,9 @@
 * {
     font-family: helvetica "Gill sans" Arial "sans-serif";
 }
+xmp {
+    font-family: monospace;
+}
 
 /* element */
 dt {
