@@ -455,7 +455,7 @@ article > .chld-blue {
             <h4>exactly this one, specific, nth child</h4>
             <p><code>:nth-child(2)</code> will target exactly the given element when it is the second child element of its parent.</p>
             <ul class="root-of-nth-child-search">
-                <li>first child</li>
+                <li>First child</li>
                 <li>Second child</li>
                 <li>Third child</li>
                 <li>Fourth child</li>
@@ -463,6 +463,21 @@ article > .chld-blue {
                 <li>Sixth child</li>
                 <li>Seventh child</li>
             </ul>
+			<xmp>
+<ul class="root-of-nth-child-search">
+	<li>First child</li>
+	<li>Second child</li>
+	<li>Third child</li>
+	<li>Fourth child</li>
+	<li>Fifth child</li>
+	<li>Sixth child</li>
+	<li>Seventh child</li>
+</ul>
+/* nth-child */
+.root-of-nth-child-search li:nth-child(2) {
+    font-weight: bold;
+}
+			</xmp>
 
             <h4>every nth child</h4>
             <p><code>:nth-child(2n)</code> - an element of this type will be matched if it is 2 * nth child element of its parent (where n is the series 0 to the number of child elements).</p>
