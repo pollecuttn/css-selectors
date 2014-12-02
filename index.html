@@ -330,11 +330,22 @@ article > .chld-blue {
             <h3>empty</h3>
             <p>:empty selects empty elements. N.B. elements, whitespace and text nodes prevent an element from being :empty. The presence of comment nodes does not prevent their parent element from being :empty.</p>
             <p>The middle list item is empty, and has content-after applied by its matched rule</p>
-            <ul class="root-of-empty-search">
-                <li>First element</li>
-                <li></li>
-                <li>Third element</li>
-            </ul>
+			<ul class="root-of-empty-search">
+				<li>First element</li>
+				<li></li>
+				<li>Third element</li>
+			</ul>
+			<xmp>
+<ul class="root-of-empty-search">
+	<li>First element</li>
+	<li></li>
+	<li>Third element</li>
+</ul>
+/* empty */
+.root-of-empty-search :empty:after {
+    content: "[empty element]";
+}
+			</xmp>
         </article>
 
         <article class="root-of-only-child-search">
