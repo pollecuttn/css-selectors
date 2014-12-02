@@ -353,6 +353,14 @@ article > .chld-blue {
             <p>:only-child matches if the designated element is the only child of its parent (only evaluates element node type, ignores text). In the example below, the match to :only-child will be in small caps.</p>
             <p>In this paragraph, <span>this element</span> is the only child.</p>
             <p>In this paragraph, both <span>this</span>, and <span>this element</span>, are child elements of the same type.</p>
+			<xmp>
+<p>In this paragraph, <span>this element</span> is the only child.</p>
+<p>In this paragraph, both <span>this</span>, and <span>this element</span>, are child elements of the same type.</p>
+/* unique children */
+.root-of-only-child-search p span:only-child {
+    font-variant: small-caps;
+}
+			</xmp>
         </article>
 
         <article class="root-of-only-child-of-type-search">
