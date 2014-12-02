@@ -507,16 +507,35 @@ article > .chld-blue {
 			</xmp>
 
             <h4>every nth child starting with offset</h4>
-            <p><code>:nth-child(3n+2)</code> - an element of this type will be matched if it is 3 * n + 2th child element of its parent (where n is the series 0 to the number of child elements). Note that although in this example the offset is +2, the offset may be negative.</p>
+            <p><code>:nth-child(3n+2)</code> - an element of this type will be matched if it is 3 * n + 2th child element of its parent. Note that although in this example the offset is +2, the offset may be negative. Note also that you need to work out the offset (the second bit, +2) before working out the nth child (3n) to figure out how this will display.</p>
             <ul class="root-of-nth-child-xn-offset-search">
-                <li>first child</li>
+                <li>First child</li>
                 <li>Second child</li>
                 <li>Third child</li>
                 <li>Fourth child</li>
                 <li>Fifth child</li>
                 <li>Sixth child</li>
                 <li>Seventh child</li>
+				<li>Eighth child</li>
+				<li>Ninth child</li>
             </ul>
+			<xmp>
+<ul class="root-of-nth-child-xn-offset-search">
+	<li>First child</li>
+	<li>Second child</li>
+	<li>Third child</li>
+	<li>Fourth child</li>
+	<li>Fifth child</li>
+	<li>Sixth child</li>
+	<li>Seventh child</li>
+	<li>Eighth child</li>
+	<li>Ninth child</li>
+</ul>
+/* nth-child(xn+m) */
+.root-of-nth-child-xn-offset-search li:nth-child(3n+2) {
+    font-weight: bold;
+}
+			</xmp>
 
             <h4>every even child</h4>
             <p>an element of this type will be matched if it is an even child of its parent</p>
