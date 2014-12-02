@@ -369,6 +369,15 @@ article > .chld-blue {
             <p>In this paragraph, <span>this element</span> is the only child.</p>
             <p>In this paragraph, both <span>this</span>, and <span>this element</span>, are child elements of the same type.</p>
             <p>In this paragraph, <span>this</span>, and <label>this element</label>, are child elements of different types.</p>
+			<xmp>
+<p>In this paragraph, <span>this element</span> is the only child.</p>
+<p>In this paragraph, both <span>this</span>, and <span>this element</span>, are child elements of the same type.</p>
+<p>In this paragraph, <span>this</span>, and <label>this element</label>, are child elements of different types.</p>
+/* unique children of type */
+.root-of-only-child-of-type-search p span:only-of-type {
+    font-variant: small-caps;
+}
+			</xmp>
         </article>
 
         <article>
