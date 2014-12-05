@@ -168,6 +168,11 @@ article > .chld-blue {
     font-weight: bold;
 }
 
+/* nth-last-child(xn) */
+.root-of-nth-last-child-xn-search li:nth-last-child(2n) {
+    font-weight: bold;
+}
+
 /* nth-last-child-with-offset */
 .root-of-nth-child-xn-last-offset-search li:nth-last-child(3n+2) {
     font-weight: bold;

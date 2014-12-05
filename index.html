@@ -625,15 +625,28 @@ article > .chld-blue {
 
             <h4>every nth-last child</h4>
             <p><code>:nth-last-child(2n)</code> - an element of this type will be matched if it is 2 * nth-last child element of its parent (where n is the series 0 to the number of child elements).</p>
-            <ul class="root-of-nth-child-xn-search">
+            <ul class="root-of-nth-last-child-xn-search">
                 <li>first child</li>
                 <li>Second child</li>
                 <li>Third child</li>
                 <li>Fourth child</li>
                 <li>Fifth child</li>
                 <li>Sixth child</li>
-                <li>Seventh child</li>
             </ul>
+			<xmp>
+<ul class="root-of-nth-last-child-xn-search">
+	<li>first child</li>
+	<li>Second child</li>
+	<li>Third child</li>
+	<li>Fourth child</li>
+	<li>Fifth child</li>
+	<li>Sixth child</li>
+</ul>
+/* nth-last-child */
+.root-of-nth-last-child-search li:nth-last-child(2n) {
+    font-weight: bold;
+}
+			</xmp>
 
             <h4>every nth-last child with offset</h4>
             <p><code>:nth-last-child(3n+2)</code> - an element of this type will be matched if it is 3 * n + 2th child element of its parent (where n is the series 0 to the number of child elements). Note that although in this example the offset is +2, the offset may be negative.</p>
