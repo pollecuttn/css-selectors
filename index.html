@@ -567,7 +567,7 @@ article > .chld-blue {
             <h4>every odd child</h4>
             <p>an element of this type will be matched if it is an odd child of its parent</p>
             <ul class="root-of-nth-child-odd-search">
-                <li>first child</li>
+                <li>First child</li>
                 <li>Second child</li>
                 <li>Third child</li>
                 <li>Fourth child</li>
@@ -575,6 +575,21 @@ article > .chld-blue {
                 <li>Sixth child</li>
                 <li>Seventh child</li>
             </ul>
+			<xmp>
+<ul class="root-of-nth-child-odd-search">
+	<li>First child</li>
+	<li>Second child</li>
+	<li>Third child</li>
+	<li>Fourth child</li>
+	<li>Fifth child</li>
+	<li>Sixth child</li>
+	<li>Seventh child</li>
+</ul>
+/* nth-child(odd) */
+.root-of-nth-child-odd-search li:nth-child(odd) {
+    font-weight: bold;
+}
+			</xmp>
         </article>
 
         <article>
