@@ -757,6 +757,25 @@ article > .chld-blue {
                 <div><label for="isChecked"><code>:checked</code></label><input type="checkbox" id="isChecked" name="isChecked" checked="checked"></div>
                 <p>There is also the <code>:indeterminate</code>, pseudo class that can only be added programatically.</p>
             </form>
+			<xmp>
+<form action="GET" class="root-of-ui-pseudo-classes-search">
+	<div><label for="isEnabled"><code>:enabled</code></label><input type="text" id="isEnabled" name="isEnabled"></div>
+	<div><label for="isDisabled"><code>:disabled</code></label><input type="text" id="isDisabled" name="isDisabled" disabled="disabled"></div>
+	<div><label for="isChecked"><code>:checked</code></label><input type="checkbox" id="isChecked" name="isChecked" checked="checked"></div>
+</form>
+/* dynamic UI pseudo classes */
+.root-of-ui-pseudo-classes-search :enabled {
+    border: 2px green solid;
+}
+
+.root-of-ui-pseudo-classes-search :disabled {
+    border: 2px red solid;
+}
+
+.root-of-ui-pseudo-classes-search :checked {
+    margin-left: 50px;
+}
+			</xmp>
         </article>
 
         <article>
