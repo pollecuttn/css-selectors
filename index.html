@@ -723,6 +723,9 @@ article > .chld-blue {
 
     <section>
         <h2>Pseudo classes: dynamic</h2>
+		
+		<p>Pseudo classes syntax uses ':' prefix (cf '::' prefix for pseudo element).
+		
         <article>
             <h3>the anchor elements - :link, :visited, :hover, :active</h3>
             <p>matches a elements in a particular dynamic state.</p>
@@ -847,6 +850,13 @@ article > .chld-blue {
         <article>
             <h3>first letter</h3><code>::first-letter</code> matches the first letter within an element</h3>
             <p class="first-letter-target">First letter of this paragraph is bigger.</p>
+			<xmp>
+<p class="first-letter-target">First letter of this paragraph is bigger.</p>
+/* first letter pseudo element */
+.first-letter-target::first-letter {
+    font-size: 200%;
+}
+			</xmp>
         </article>
 
         <article>
