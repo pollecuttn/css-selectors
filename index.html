@@ -681,7 +681,7 @@ article > .chld-blue {
         </article>
 
         <article>
-            <h3>nth-of-type</h3>
+            <h3>every nth-of-type</h3>
             <p>As every nth-child, but only elements of the element type to match are included in the evaluation of the child count.</p>
 			</p>:nth-of-type(2n) - an element of this type will be matched if it is 2 * nth type of element.</p>
 			<p class="root-of-nth-of-type-search">Here is a <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>.</p>
@@ -695,7 +695,7 @@ article > .chld-blue {
         </article>
 
         <article>
-            <h3>nth-last-of-type</h3>
+            <h3>every nth-last-of-type</h3>
             <p>As nth-of-type, but only elements of the element type to match are included in the evaluation of the child count.</p>
 			<p class="root-of-nth-last-of-type-search">Here is a <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>.</p>
 			<xmp>
@@ -706,6 +706,18 @@ article > .chld-blue {
 }
 			</xmp>
         </article>
+		
+		<article>
+			<h3>every nth-last-of-type with offset</h3>
+			<p>:nth-last-of-type(2n+3) - an element of this type will be matched if it is 2 * n + 3th child element of its type. Note that although in this example the offset is +3, the offset may be negative. Note also that you need to work out the offset (the second bit, +3) before working out the nth type (2n) to figure out how this will display.</p>
+			<p class="root-of-nth-last-of-type-with-offset-search">Here is a <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>.</p>
+			<xmp>
+/* nth-last-of-type-with-offset(xn+m) */
+.root-of-nth-last-of-type-with-offset-search span:nth-last-of-type(2n+3){
+	font-weight: bold;
+}
+			</xmp>
+		</article>
 
     </section>
 

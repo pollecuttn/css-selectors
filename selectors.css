@@ -188,6 +188,11 @@ article > .chld-blue {
 	font-weight: bold;
 }
 
+/* nth-last-of-type-with-offset(xn+m) */
+.root-of-nth-last-of-type-with-offset-search span:nth-last-of-type(2n+3){
+	font-weight: bold;
+}
+
 
 /* dynamic pseudo classes on a element */
 .root-of-link-pseudo-classes-search a:link {
