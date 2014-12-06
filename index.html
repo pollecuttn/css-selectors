@@ -796,12 +796,22 @@ article > .chld-blue {
 
         <article>
             <h3>:lang</h3>
-            <p>matches elements of the specified language. In contrast with the lang attribute selector, this <code>:lang</code> pseudo element takes many document methods of language specification into account (including the lang attribute).</p>
-            <p>Make Portuguese text a different color:</p>
+            <p>matches elements with the specified language. In contrast with the lang attribute selector, this <code>:lang</code> pseudo element takes into account many document methods of language specification (including the lang attribute).</p>
+            <p>Make Portuguese text a different colour:</p>
             <ul>
                 <li lang="en-uk">Hello!</li>
-                <li lang="pt">Ol&aacute;</li>
+                <li lang="pt">Ol&aacute;!</li>
             </ul>
+			<xmp>
+<ul>
+	<li lang="en-uk">Hello!</li>
+	<li lang="pt">Ol&aacute;!</li>
+</ul>
+/* lang pseudo class */
+:lang(pt) {
+    color: #34e;
+}
+			</xmp>
         </article>
 
         <article>
