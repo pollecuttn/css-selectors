@@ -724,9 +724,28 @@ article > .chld-blue {
     <section>
         <h2>Pseudo classes: dynamic</h2>
         <article>
-            <h3>the anchor element's - :link, :visited, :hover, :active</h3>
+            <h3>the anchor elements - :link, :visited, :hover, :active</h3>
             <p>matches a elements in a particular dynamic state.</p>
             <p class="root-of-link-pseudo-classes-search"><a href="/one/">one</a>, <a href="selectors.css">two</a>, <a href="/three/">three</a>, <a href="/four/">four</a>.</p>
+			<xmp>
+<p class="root-of-link-pseudo-classes-search"><a href="/one/">one</a>, <a href="selectors.css">two</a>, <a href="/three/">three</a>, <a href="/four/">four</a>.</p>
+/* dynamic pseudo classes on a element */
+.root-of-link-pseudo-classes-search a:link {
+    color: green;
+}
+
+.root-of-link-pseudo-classes-search a:visited {
+    color: red;
+}
+
+.root-of-link-pseudo-classes-search a:hover {
+    color: blue;
+}
+
+.root-of-link-pseudo-classes-search a:active {
+    font-weight: bold;
+}
+			</xmp>
         </article>
 
         <article>
