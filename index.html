@@ -823,6 +823,19 @@ article > .chld-blue {
                 <li>I'm not included</li>
                 <li class="include-me">I'm included</li>
             </ul>
+			<xmp>
+<ul class="root-of-negation-pseudo-classes-search">
+	<li class="include-me">I'm included</li>
+	<li class="include-me">I'm included</li>
+	<li>I'm not included</li>
+	<li class="include-me">I'm included</li>
+</ul>
+/* negation pseudo class */
+.root-of-negation-pseudo-classes-search :not(.include-me) {
+    color: red;
+    font-weight: bold;
+}
+			</xmp>
         </article>
 
     </section>
