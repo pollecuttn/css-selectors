@@ -862,6 +862,13 @@ article > .chld-blue {
         <article>
             <h3>first line</h3><code>::first-line</code> matches the first letter within an element</h3>
             <p class="first-line-target">The first line of this paragraph is always going to be bold, no matter how long it is. If you resize the viewport, you will still be able to see the first line of this paragraph emboldened. That's how it works.</p>
+			<xmp>
+<p class="first-line-target">The first line of this paragraph is always going to be bold, no matter how long it is. If you resize the viewport, you will still be able to see the first line of this paragraph emboldened. That's how it works.</p>
+/* first letter pseudo element */
+.first-line-target::first-line {
+    font-weight: bold;
+}
+			</xmp>
         </article>
 
         <article>
