@@ -878,6 +878,24 @@ article > .chld-blue {
                 <li class="put-stuff-before-me">source content</li>
                 <li class="put-stuff-after-me">source content</li>
             </ul>
+			<xmp>
+<ul>
+	<li>source content</li>
+	<li class="put-stuff-before-me">source content</li>
+	<li class="put-stuff-after-me">source content</li>
+</ul>
+/* generated content ::before */
+.put-stuff-before-me::before {
+    font-style: italic;
+    content: "am just nippin' in here, cheekily! "
+}
+
+/* generated content ::after */
+.put-stuff-after-me::after {
+    font-style: italic;
+    content: " loitering at the end..."
+}
+			</xmp>
         </article>
     </section>
     <footer class="meta">Forked from <a href="http://davidcmoulton.github.io/css-selectors/">css-selectors</a> by <a href="http://twitter.com/davidcmoulton">@davidcmoulton</a></footer>
