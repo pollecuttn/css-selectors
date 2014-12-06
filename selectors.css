@@ -183,6 +183,12 @@ article > .chld-blue {
 	font-weight: bold;
 }
 
+/* nth-last-of-type(xn) */
+.root-of-nth-last-of-type-search span:nth-last-of-type(2n){
+	font-weight: bold;
+}
+
+
 /* dynamic pseudo classes on a element */
 .root-of-link-pseudo-classes-search a:link {
     color: green;

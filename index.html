@@ -696,6 +696,14 @@ article > .chld-blue {
         <article>
             <h3>nth-last-of-type</h3>
             <p>As nth-of-type, but only elements of the element type to match are included in the evaluation of the child count.</p>
+			<p class="root-of-nth-last-of-type-search">Here is a <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>.</p>
+			<xmp>
+<p class="root-of-nth-last-of-type-search">Here is a <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>.</p>
+/* nth-last-of-type(xn) */
+.root-of-nth-last-of-type-search span:nth-last-of-type(2n){
+	font-weight: bold;
+}
+			</xmp>
         </article>
 
     </section>
