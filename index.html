@@ -678,12 +678,19 @@ article > .chld-blue {
     font-weight: bold;
 }
 			</xmp>
-
         </article>
 
         <article>
             <h3>nth-of-type</h3>
             <p>As nth-child, but only elements of the element type to match are included in the evaluation of the child count.</p>
+			<p class="root-of-nth-of-type-search">Here is a <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>.</p>
+			<xmp>
+<p class="root-of-nth-of-type-search">Here is a <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>, and another <span>span</span>.</p>
+/* nth-of-type(xn) */
+.root-of-nth-of-type-search span:nth-of-type(2n){
+	font-weight: bold;
+}
+			</xmp>
         </article>
 
         <article>

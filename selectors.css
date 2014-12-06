@@ -178,7 +178,10 @@ article > .chld-blue {
     font-weight: bold;
 }
 
-
+/* nth-of-type(xn) */
+.root-of-nth-of-type-search span:nth-of-type(2n){
+	font-weight: bold;
+}
 
 /* dynamic pseudo classes on a element */
 .root-of-link-pseudo-classes-search a:link {
